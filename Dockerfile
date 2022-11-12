@@ -29,7 +29,7 @@ RUN wget https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_ins
 RUN chmod +x thinkorswim_installer.sh
 
 RUN sh -c 'echo "1\ro\r1\r1\r1\r\ry\rn\ry\r" | ./thinkorswim_installer.sh'
-RUN /root/thinkorswim/thinkorswim
-COPY ./tos.sh /tos.sh
+# COPY ./tos.sh /tos.sh
+
 
 CMD ["/tos.sh"]
