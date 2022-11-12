@@ -1,0 +1,17 @@
+input price = close;
+
+input period1 = 50;
+input period2 = 100;
+input period3 = 200;
+
+plot ema1 = ExpAverage(price, period1);
+plot ema2 = ExpAverage(price, period2);
+plot ema3 = ExpAverage(price, period3);
+
+
+AddOrder(OrderType.BUY_AUTO, ema1 > ema2 and ema2 > ema3);
+AddOrder(OrderType.SELL_AUTO, ema1 < ema2 and ema2 < ema3);
+
+
+
+# AddLabel(yes, concat(shouldBuy, getSymbol()), Color.RED);
