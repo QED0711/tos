@@ -7,4 +7,4 @@ docker run --rm -ti -t \
     -v $PWD/workspaces/:/workspaces/:z \
     -v $PWD/tos.sh:/tos.sh \
     -v $PWD/persist_workspaces.sh:/persist_workspaces.sh \
-    tos:latest bash
+    tos:latest
