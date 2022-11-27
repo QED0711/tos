@@ -4,7 +4,8 @@
     <DETACHED_FRAME_0 ALWAYS_ON_TOP="false" HEIGHT="1080" LAYOUT="MAIN" STATE="MAXIMIZED_HORIZ  MAXIMIZED_VERT" WIDTH="1920" X="1920" Y="0">
       <AUDIO URL=""/>
       <COM.DEVEXPERTS.TOS.UI.USER.ALERT.LASTSOUNDTAGKEY LAST_SOUNDTAG="Bell"/>
-      <DESKTOP ALERTS_THINK_SCRIPT_EDITOR_HEIGHT="792" ALERTS_THINK_SCRIPT_EDITOR_WIDTH="1081" ALERTS_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" ALERTS_THINK_SCRIPT_HELP_DIVIDER_LOCATION="176" ALERTS_THINK_SCRIPT_SIDE_PANEL_WIDTH="283" ALLOCATION_MODE="Single Account" CUSTOM_QUOTES_THINK_SCRIPT_EDITOR_HEIGHT="400" CUSTOM_QUOTES_THINK_SCRIPT_EDITOR_WIDTH="1000" CUSTOM_QUOTES_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" CUSTOM_QUOTES_THINK_SCRIPT_HELP_DIVIDER_LOCATION="133" CUSTOM_QUOTES_THINK_SCRIPT_SIDE_PANEL_WIDTH="333" FILTERS_THINK_SCRIPT_EDITOR_HEIGHT="400" FILTERS_THINK_SCRIPT_EDITOR_WIDTH="1000" FILTERS_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" FILTERS_THINK_SCRIPT_HELP_DIVIDER_LOCATION="133" FILTERS_THINK_SCRIPT_SIDE_PANEL_WIDTH="333" LAST_USED_LAYOUT="TOS CHARTS" MRU_SYMBOLS="EUR/USD,GBP/CHF,AUD/USD,EUR/JPY,EUR/GBP,EUR/CHF" ORDER_THINK_SCRIPT_EDITOR_HEIGHT="985" ORDER_THINK_SCRIPT_EDITOR_WIDTH="1556" ORDER_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" ORDER_THINK_SCRIPT_HELP_DIVIDER_LOCATION="176" ORDER_THINK_SCRIPT_SIDE_PANEL_WIDTH="283" PATTERN_EDITOR_DIVIDER="400" PATTERN_EDITOR_HEIGHT="800" PATTERN_EDITOR_WIDTH="1000" SAVE_ALLOCATION_MODE="false" THINK_SCRIPT_ALERT_AUTOCOMPLETE="true" THINK_SCRIPT_ALERT_POPUP_HELP="true" THINK_SCRIPT_EDITOR_FONT_FAMILY="Monospaced" THINK_SCRIPT_EDITOR_FONT_SIZE="16" THINK_SCRIPT_EDITOR_HEIGHT="916" THINK_SCRIPT_EDITOR_WIDTH="1412" THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" THINK_SCRIPT_HELP_DIVIDER_LOCATION="567" THINK_SCRIPT_SIDE_PANEL="Reference" THINK_SCRIPT_SIDE_PANEL_WIDTH="333" UD_WARNING="false">
+      <DESKTOP ALERTS_THINK_SCRIPT_EDITOR_HEIGHT="792" ALERTS_THINK_SCRIPT_EDITOR_WIDTH="1081" ALERTS_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" ALERTS_THINK_SCRIPT_HELP_DIVIDER_LOCATION="176" ALERTS_THINK_SCRIPT_SIDE_PANEL_WIDTH="283" ALLOCATION_MODE="Single Account" CUSTOM_QUOTES_THINK_SCRIPT_EDITOR_HEIGHT="400" CUSTOM_QUOTES_THINK_SCRIPT_EDITOR_WIDTH="1000" CUSTOM_QUOTES_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" CUSTOM_QUOTES_THINK_SCRIPT_HELP_DIVIDER_LOCATION="133" CUSTOM_QUOTES_THINK_SCRIPT_SIDE_PANEL_WIDTH="333" FILTERS_THINK_SCRIPT_EDITOR_HEIGHT="400" FILTERS_THINK_SCRIPT_EDITOR_WIDTH="1000" FILTERS_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" FILTERS_THINK_SCRIPT_HELP_DIVIDER_LOCATION="133" FILTERS_THINK_SCRIPT_SIDE_PANEL_WIDTH="333" LAST_USED_LAYOUT="TOS CHARTS" MRU_SYMBOLS="AUD/USD,EUR/GBP,EUR/CHF" ORDER_THINK_SCRIPT_EDITOR_HEIGHT="985" ORDER_THINK_SCRIPT_EDITOR_WIDTH="1556" ORDER_THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" ORDER_THINK_SCRIPT_HELP_DIVIDER_LOCATION="176" ORDER_THINK_SCRIPT_SIDE_PANEL_WIDTH="283" PATTERN_EDITOR_DIVIDER="400" PATTERN_EDITOR_HEIGHT="800" PATTERN_EDITOR_WIDTH="1000" SAVE_ALLOCATION_MODE="false" THINK_SCRIPT_ALERT_AUTOCOMPLETE="true" THINK_SCRIPT_ALERT_POPUP_HELP="true" THINK_SCRIPT_EDITOR_FONT_FAMILY="Monospaced" THINK_SCRIPT_EDITOR_FONT_SIZE="16" THINK_SCRIPT_EDITOR_HEIGHT="916" THINK_SCRIPT_EDITOR_WIDTH="1412" THINK_SCRIPT_ERROR_PANEL_HEIGHT="65" THINK_SCRIPT_HELP_DIVIDER_LOCATION="567" THINK_SCRIPT_SIDE_PANEL="Reference" THINK_SCRIPT_SIDE_PANEL_WIDTH="333" UD_WARNING="false">
+        <ACCNT_STMT/>
         <ACCOUNT_GROUP FOREX_REPORT_LAYOUT_CONFIG="{&#10;ORDER_ENTRY_EXPANDED=false&#10;}&#10;" ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="MONITOR">
           <FX_REPORT ORDER_ENTRY_EXPANDED="false"/>
         </ACCOUNT_GROUP>
@@ -17,17 +18,31 @@
               <POSITION_SUMMARY_PANEL CELL_IDS="POSITION_BREAKDOWN;NET_POSITION;AVERAGE_PRICE;PL_OPEN;PL_DAY" ENABLED="true"/>
               <TRADE_BUTTONS_CONFIG CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FUTURE" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" QTY="1.0" QTY_STEP="1.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY_WITH_BUTTONS;ORDER_TEMPLATE;AUTO_SEND;ORDER_SETUP">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE_BUTTONS_CONFIG>
             </ACTIVETRADER>
@@ -42,17 +57,31 @@
             <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FUTURE" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" QTY="1.0" QTY_STEP="1.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY_WITH_BUTTONS;ORDER_TEMPLATE;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
               <OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
               </OCO_STOP>
-              <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-              <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+              <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                <OFFSET_PER_SYMBOL/>
+              </TRG_0>
+              <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                <OFFSET_PER_SYMBOL/>
+              </TRG_1>
               <_2>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
               </_2>
               <_3>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
               </_3>
             </TRADE>
           </ACT_TRD_CELL0>
@@ -61,17 +90,31 @@
               <POSITION_SUMMARY_PANEL CELL_IDS="POSITION_BREAKDOWN;NET_POSITION;AVERAGE_PRICE;PL_OPEN;PL_DAY" ENABLED="true"/>
               <TRADE_BUTTONS_CONFIG CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FUTURE" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" QTY="1.0" QTY_STEP="1.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY_WITH_BUTTONS;ORDER_TEMPLATE;AUTO_SEND;ORDER_SETUP">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE_BUTTONS_CONFIG>
             </ACTIVETRADER>
@@ -86,17 +129,31 @@
             <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FUTURE" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" QTY="1.0" QTY_STEP="1.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY_WITH_BUTTONS;ORDER_TEMPLATE;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
               <OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
               </OCO_STOP>
-              <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-              <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+              <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                <OFFSET_PER_SYMBOL/>
+              </TRG_0>
+              <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                <OFFSET_PER_SYMBOL/>
+              </TRG_1>
               <_2>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
               </_2>
               <_3>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
               </_3>
             </TRADE>
           </ACT_TRD_CELL1>
@@ -240,17 +297,20 @@
         </ALERTS>
         <ALLOCATION QUANTITIES=""/>
         <ANALYZE_GROUP ORDER_ENTRY_EXPANDED="false" PALETTE="ff66ff,ffff,ff7e9c,b5b5b5,e7be00,ff5f5f,c531,797979,f9e9a7,ffffff,ff7e00,c0bfff,f6bcb3,74bde8,ea88ff,8fefbf" SELECTED_LAYOUT="RISK_PROFILE" SYMBOL_GROUP="1">
+          <ADD_SIMULATED_TRADES/>
           <DROPDOWN EXPANDED="true"/>
           <DROPDOWN1 EXPANDED="false"/>
           <FUTURES EXPANDED="true"/>
           <OPTIONS_CHART_PANEL DELTA_SUBGRAPH="false" HIGHLIGHT_TICKS="false" LOCK_TIME_AXIS="false" PALETTE="ff66ff,ffff,ff7e9c,b5b5b5,e7be00,ff5f5f,c531,797979,f9e9a7,ffffff,ff7e00,c0bfff,f6bcb3,74bde8,ea88ff,8fefbf" PERCENT_AXIS="false" PRODUCT_DEPTH_MODE="OPTIONS">
             <COMBO_CHECK_BOX COLORS="" SELECTION=""/>
             <FUTURES_CURVES CURVES_COUNT="0"/>
+            <OPTIONS_CHART/>
             <OPTIONS_CHART_CONTROLS STRIKE_COUNT="All" VALUE="IMPL_VOL" VALUE2="IMPL_VOL" VIEW="ALL"/>
           </OPTIONS_CHART_PANEL>
           <OPTIONS_STATISTIC EXPANDED="false"/>
           <OPTIONS_TIME_AND_SALES ALL_CONDITIONS="true" ALL_EXCHANGES="true" ALL_PRICE="true" ALL_QUANTITIES="true" ALL_SERIES="true" ALL_STRIKES="true" EXPANDED="false" SELECTED_CONDITIONS="" SELECTED_EXCHANGES="" SELECTED_SERIES="" SELECTED_SIDE="BOTH"/>
           <OPTION_CHAIN EXPANDED="true"/>
+          <PROBABILITY_ANALYSIS/>
           <PRODUCT_DEPTH EXPANDED="false"/>
           <QSHEETPANEL QSHEET_CONFIGURATION_COLUMNS="LASTX,NET_CHANGE" STRIKE_QTY="4">
             <ALLPRODUCTSPANELSMODEL>
@@ -261,6 +321,7 @@
               <UNDERLYING ORDERING="0" SWITCHED_ON="true"/>
               <WIDGET_360 ORDERING="5" SWITCHED_ON="true"/>
             </ALLPRODUCTSPANELSMODEL>
+            <OPTIONSLISTPANEL/>
             <OPTIONS_SELECT TEMPLATE_FILTER_NAME="Single">
               <FUTURES_FILTER_NAME ALL_DELIVERABLES="true" ALL_EXCHANGES="true" ALL_EXPIRATION_DAYS="true" ALL_EXPIRATION_TYPES="true" ALL_SIDES="true" ALL_STRIKES="true" SELECTED_DELIVERABLES="REGULAR" SELECTED_EXCHANGES="COMPOSITE" SELECTED_EXPIRATION_TYPES="REGULAR" SELECTED_SIDE="BOTH" THEO_ADJ_TYPE="DOLLAR" THEO_DATE="19316" THEO_VOL_ADJ="0.0">
                 <THEO_ADJ_VALUES_NAME DOLLAR="0.0" PERCENT="0.0" SIGMA="0.0"/>
@@ -270,12 +331,24 @@
               </STOCK_FILTER_NAME>
             </OPTIONS_SELECT>
           </QSHEETPANEL>
+          <RISK_PROFILE>
+            <CHART_PANEL/>
+          </RISK_PROFILE>
           <SIMULATION_PANEL SLICE_EXPAND="false" TRADES_EXPANDED="AUD/USD">
             <BALANCES UNSELECTED=""/>
             <TRADES>
               <ORDER_0 DRAW_COLOR="0" DRAW_SELECTED="false" ORDER="SELL -10,000 AUD/USD @.66462 LMT GTC" PRICE_FIXED="true" SELECTED="true"/>
+              <PRICE_SLICES/>
             </TRADES>
           </SIMULATION_PANEL>
+          <SORTING/>
+          <SORTING1/>
+          <SORTING2/>
+          <SORTING3/>
+          <SORTING4/>
+          <SORTING5/>
+          <SORTING6/>
+          <SORTING7/>
           <TRADE_GRID COLUMN_COUNT="3" DEFAULT_TYPE="LEVEL_II" EXPANDED="false" ROW_COUNT="1">
             <CELL0 ROWSPANELWEIGHT="1.0" ROWWEIGHT0="1.0" ROWWEIGHT1="1.0" SELECTED_TYPE="LEVEL_II" SIDEBAR_IS_ACTIVE="true" SYMBOL_GROUP="-1" TRADE_BUTTONS_MIGRATED="true">
               <ACTIVETRADER VERTICAL="false" VISIBLE="false" WEIGHT="2.0"/>
@@ -291,17 +364,31 @@
               <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
               <TRADE CONFIGURATION_NAME="SINGLE" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE>
             </CELL0>
@@ -319,17 +406,31 @@
               <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
               <TRADE CONFIGURATION_NAME="SINGLE" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE>
             </CELL1>
@@ -347,17 +448,31 @@
               <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
               <TRADE CONFIGURATION_NAME="SINGLE" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="DAY" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE>
             </CELL2>
@@ -370,12 +485,19 @@
           <UNDERLYING1 EXPANDED="true"/>
           <UNDERLYING_PANEL FUTURES_DISPLAYING_MODE="ACTIVE ONLY"/>
         </ANALYZE_GROUP>
+        <CALENDAR/>
         <CAPTIONS ENABLED="false"/>
+        <CHART/>
         <CHARTING CHART_GROUP_MANAGER="@v9@%0:com.devexperts.toschart.facade.persistence,1:java.util,2:com.devexperts.toschart.model%owner{chartAggregationPeriods:ChartAggregationPeriodArray0,chartAggregationPeriods=@ChartAggregationPeriodArray0}#%0.ChartGroupManagerPersistence{encodedMyToolsModel=&quot;{\&quot;items\&quot;:[{\&quot;tool\&quot;:\&quot;POINTING\&quot;,\&quot;name\&quot;:\&quot;\&quot;},{\&quot;tool\&quot;:\&quot;PRICE_LEVEL\&quot;,\&quot;name\&quot;:\&quot;\&quot;},{\&quot;loadedName\&quot;:\&quot;TS_SUPPORT_BOUNCE_TRIGGER\&quot;,\&quot;type\&quot;:\&quot;STUDY\&quot;,\&quot;name\&quot;:\&quot;TS_SUPPORT_BOUNCE_TRIGGER\&quot;}],\&quot;toggledItemIndex\&quot;:-1,\&quot;mode\&quot;:\&quot;SINGLE_CHART\&quot;,\&quot;viewMode\&quot;:\&quot;ON_EACH_CHART\&quot;}&quot;,generalProperties=#%1.HashMap{^(&quot;showUnsavedDrawingsNotifications&quot;,&lt;T),^(&quot;showLogo&quot;,&lt;T),^(&quot;quickTimeFrames&quot;,&quot;[1d:m, 5d:5m, 5d:15m, 10d:30m, 20d:h, 180d:4h, 1y:d, 3y:w]&quot;),^(&quot;majorTimeZoneIds&quot;,#java.lang.String[11]{0=&quot;America/Los_Angeles&quot;,1=&quot;America/Denver&quot;,2=&quot;America/Chicago&quot;,3=&quot;America/New_York&quot;,4=&quot;GMT&quot;,5=&quot;Europe/London&quot;,6=&quot;Europe/Berlin&quot;,7=&quot;Europe/Moscow&quot;,8=&quot;Asia/Hong_Kong&quot;,9=&quot;Asia/Tokyo&quot;,10=&quot;Australia/Sydney&quot;}),^(&quot;timezone&quot;,&quot;GMT&quot;)},groups=#%1.ArrayList{+(#%0.ChartGroupPersistence{groupId=&quot;isolated&quot;,properties=#%1.HashMap{^(&quot;hideStatusString&quot;,&lt;T),^(&quot;databoxPin&quot;,&lt;T),^(&quot;databoxMode&quot;,!java.lang.Enum.valueOf:DataBoxMode0(*%2.DataBoxMode.class,&quot;NONE&quot;))}}),+(#%0.ChartGroupPersistence{groupId=&quot;default&quot;,properties=#%1.HashMap{^(&quot;hideStatusString&quot;,&lt;T),^(&quot;synchronizeCrosshair&quot;,&lt;T),^(&quot;databoxPin&quot;,&lt;T),^(&quot;databoxMode&quot;,@DataBoxMode0)}})}}" CORRECTIONS="" DISABLED_MESSAGES=""/>
         <CHARTS_GROUP ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="TOS CHARTS"/>
+        <CHAT>
+          <HIDDEN_USERS/>
+        </CHAT>
         <COM.DEVEXPERTS.TOS.UI.USER.TFACE.GADGETSIDEBARSPLITPANE DIVIDER_LAST_LOCATION="32.727272" DIVIDER_LOCATION="35.81818"/>
         <CONFIG PRIVACY_MODE="false"/>
         <CONFIGURABLE_TAB SLIDER_PINNED="false"/>
+        <DISCLOSURES/>
+        <DUMMY/>
         <ERROR_REPORT AUTO_SEND_REPORT="true"/>
         <FLEX CURRENT_GRID_NAME="forex_fg" ORDER_ENTRY_EXPANDED="false">
           <MODELNODE0 COUNT="2" ROWLAYOUT="false" TYPE="SPLIT" WEIGHT="0.0">
@@ -384,17 +506,31 @@
                 <ACTIVETRADER CELL_IDS="POSITION_BREAKDOWN;NET_POSITION;AVERAGE_PRICE;PL_OPEN;PL_DAY" COLUMNS="TRADE_AMOUNT:100:,BUY_ORDER:150:,BIDSIZE:60:,PRICE:100:,ASKSIZE:60:,SELL_ORDER:150:" ENABLED="true" SHOW_STUDY_MARKERS="false" SYMBOL="AUD/USD" SYMBOL_GROUP="1" SYNC_AT_AND_CHART_CROSSHAIR="true" VERTICAL="false" VISIBLE="true" WEIGHT="0.9171717171717172" ZOOMING_STEPS="1">
                   <TRADE_BUTTONS_CONFIG CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="true" OS_EXPANDED="true" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="FIRST_LINE;BUY_ASK;SELL_BID;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY_WITH_BUTTONS;ORDER_TEMPLATE;AUTO_SEND;ORDER_SETUP">
                     <OCO_STOP>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="GTC"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="GTC">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
                     </OCO_STOP>
-                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="GTC"/>
-                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="GTC"/>
+                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_0>
+                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_1>
                     <_2>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="GTC"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="GTC"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="GTC">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="GTC">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                     </_2>
                     <_3>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="GTC"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="GTC"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="GTC">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="GTC">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                     </_3>
                   </TRADE_BUTTONS_CONFIG>
                 </ACTIVETRADER>
@@ -407,17 +543,31 @@
                 <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
                 <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="true" OS_EXPANDED="true" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                   <OCO_STOP>
-                    <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="GTC"/>
+                    <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_0>
                   </OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="GTC"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="GTC"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="GTC">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="GTC">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                   <_2>
-                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="GTC"/>
-                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="GTC"/>
+                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_0>
+                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_1>
                   </_2>
                   <_3>
-                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="GTC"/>
-                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="GTC"/>
+                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_0>
+                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="GTC">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_1>
                   </_3>
                 </TRADE>
               </GADGET>
@@ -436,17 +586,31 @@
                     <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
                     <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                       <OCO_STOP>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
                       </OCO_STOP>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                       <_2>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
+                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_1>
                       </_2>
                       <_3>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
+                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_1>
                       </_3>
                     </TRADE>
                   </GADGET>
@@ -463,17 +627,31 @@
                     <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
                     <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                       <OCO_STOP>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
                       </OCO_STOP>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                       <_2>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
+                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_1>
                       </_2>
                       <_3>
-                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                        <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_0>
+                        <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                          <OFFSET_PER_SYMBOL/>
+                        </TRG_1>
                       </_3>
                     </TRADE>
                   </GADGET>
@@ -491,17 +669,31 @@
                   <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
                   <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                     <OCO_STOP>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
                     </OCO_STOP>
-                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                    <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_0>
+                    <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                      <OFFSET_PER_SYMBOL/>
+                    </TRG_1>
                     <_2>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                     </_2>
                     <_3>
-                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                      <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_0>
+                      <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                        <OFFSET_PER_SYMBOL/>
+                      </TRG_1>
                     </_3>
                   </TRADE>
                 </GADGET>
@@ -682,7 +874,13 @@
           <POSITION_TABLE POSITION_TABLE="QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE"/>
         </FOREX_TRADER>
         <FRED FRED_CATALOGUE="{&quot;selectedLevel&quot;:&quot;first_level&quot;,&quot;columns&quot;:[]}" FRED_CHART="{&quot;subscriptionKey&quot;:{&quot;instrument&quot;:{&quot;symbol&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;frequencyType&quot;:&quot;DAILY&quot;,&quot;parentCategoryIds&quot;:[],&quot;fredUnits&quot;:&quot;&quot;,&quot;fredUnitsShort&quot;:&quot;&quot;,&quot;observationStartDate&quot;:0,&quot;observationEndDate&quot;:0,&quot;popularity&quot;:0,&quot;seasonalAdjustmentType&quot;:&quot;NOT_APPLICABLE&quot;},&quot;transformationParameters&quot;:{&quot;frequency&quot;:&quot;DEFAULT&quot;,&quot;aggregation&quot;:&quot;AVERAGE&quot;,&quot;unit&quot;:&quot;DEFAULT&quot;,&quot;indexDate&quot;:0},&quot;timeRange&quot;:{}},&quot;paintingSettings&quot;:{&quot;chartType&quot;:&quot;LINE&quot;,&quot;plotColor&quot;:{&quot;palette&quot;:&quot;fred&quot;,&quot;index&quot;:1},&quot;backgroundColor&quot;:{&quot;palette&quot;:&quot;fred&quot;,&quot;index&quot;:0},&quot;showGrid&quot;:true,&quot;shadeRecession&quot;:true,&quot;gridColor&quot;:{&quot;palette&quot;:&quot;fred&quot;,&quot;index&quot;:2},&quot;crossType&quot;:&quot;FULL_CROSS&quot;,&quot;crossColor&quot;:{&quot;palette&quot;:&quot;fred&quot;,&quot;index&quot;:3}}}" FRED_STATE="CATEGORIES" ORDER_ENTRY_EXPANDED="false" SYMBOL_GROUP="-1"/>
-        <FUNDAMENTALS ORDER_ENTRY_EXPANDED="false" SYMBOL_GROUP="-1"/>
+        <FUNDAMENTALS ORDER_ENTRY_EXPANDED="false" SYMBOL_GROUP="-1">
+          <DEFAULT/>
+          <ETF/>
+          <FUTURES/>
+          <STOCK/>
+        </FUNDAMENTALS>
+        <FUTURES_TRADER/>
         <GADGETS>
           <SCRATCHPAD DOC="&lt;html id=&quot;scratchpad&quot;&gt;&lt;/html&gt;"/>
         </GADGETS>
@@ -702,6 +900,7 @@
             <DASHBOARD ORDER_RULES_SET="FOREX" QTY="10000.0" QTY_STEP="10000.0" SYMBOL="EUR/CHF" SYMBOL_GROUP="1"/>
           </GADGET3>
         </GADGET_STACK_LAYOUT>
+        <HELP/>
         <HELP_GROUP ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="HELP"/>
         <HOMESCREEN DIVIDER_LOCATION="1116" ORDER_ENTRY_EXPANDED="false">
           <TICKERTAPE WATCHLISTID="500"/>
@@ -726,12 +925,16 @@
           </WIDGET_DASHBOARD>
         </HOMESCREEN>
         <INDIVIDUALS_COLUMN_MANAGER CUSTOM_OVERRIDES="" SYSTEM_OVERRIDES=""/>
+        <ISE_SPREADS/>
         <MARKET_WATCH_GROUP ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="ALERTS"/>
         <MEDIA_PLAYER AUTO_STREAM_SWITCH="true" MUTED="false" VOLUME="0.3333333333333333"/>
         <MERGEDALIKE_COLUMN_MANAGER CUSTOM_OVERRIDES="" SYSTEM_OVERRIDES=""/>
         <MONITOR ORDER_ENTRY_EXPANDED="false">
           <MONITOR_CONTENT>
             <FOREX2 EXPANDED="true"/>
+            <GROUPING_POSITION_LIST>
+              <EXPANDED/>
+            </GROUPING_POSITION_LIST>
             <GROUPING_POS_STMT_SIZE_MODEL COMMON_COLUMN_RATIOS="0.3333333333333333;0.3333333333333333;0.3333333333333333" SECTION_RATIOS="0.15151515151515152;0.5252525252525253;0.32323232323232326"/>
             <GROUPING_POS_STMT_SIZE_MODEL1 COMMON_COLUMN_RATIOS="0.3333333333333333;0.3333333333333333;0.3333333333333333" SECTION_RATIOS="0.15151515151515152;0.5252525252525253;0.32323232323232326">
               <MIDDLE_COLUMN_RATIOS>
@@ -752,26 +955,32 @@
             </TRADEACTIVITYPANEL>
           </MONITOR_CONTENT>
         </MONITOR>
+        <OPTION_HACKER/>
         <ORDER_ENTRY_AND_ORDER_QUEUE>
-          <GROUP MARKER="SINGLE">
-            <ORDER_0 ORDER="BUY +10,000 EUR/JPY @144.665 LMT GTC"/>
-          </GROUP>
+          <GROUP MARKER="SINGLE"/>
           <ORDERBOOKPANEL SELECTED_TAB="0"/>
           <ORDERBOOK_STRATEGY_TABLE_SORTING COLUMN="POSITION" ORDER="1"/>
           <ORDER_AND_STRATEGY_BOOK EXPANDED="true"/>
-          <ORDER_ENTRY_AND_SAVED_ORDERS EXPANDED="true">
+          <ORDER_ENTRY_AND_SAVED_ORDERS EXPANDED="false">
+            <ORDER_EDITOR_TABLE/>
             <PRICE_CONTROL CONDITION="1" CONDITION_LOCKED="false" PRICE="0.0" UNLOCKED="false"/>
+            <SAVED_ORDERS_TABLE/>
           </ORDER_ENTRY_AND_SAVED_ORDERS>
           <SORTING COLUMN="STATUS" ORDER="-1"/>
           <SWITCH POSITION="0"/>
         </ORDER_ENTRY_AND_ORDER_QUEUE>
+        <PAIRS_TRADER/>
         <POSITION_GROUP_MANAGER SYSTEM_POSITION_GROUPS="Futures and Futures Options:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;None:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Equities and Equity Options:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Others:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Micro-Cap:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Small-Cap:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Position:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Forex:QTY,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Mid-Cap:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE;Large-Cap:QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE"/>
         <PT_MESSAGE DISABLED="false"/>
         <QUOTES ORDER_ENTRY_EXPANDED="false">
           <FULLQUOTEPANEL COLUMNS="SYMBOL:20:,DESCRIPTION:20:,QUOTE_TREND:20:,LAST:20:,NET_CHANGE:20:,BID:20:,BID_SIZE:20:,ASK:20:,ASK_SIZE:20:,VOLUME:20:,OPEN:20:,HIGH:20:,LOW:20:,52HIGH:20:,52LOW:20:,&lt;arrow&gt;:11:F:F" FULL_QUOTES_WL_ID="7992311" SYMBOL_GROUP="-1"/>
         </QUOTES>
         <ROLLING_STRATEGIES ORDER_ENTRY_EXPANDED="false">
+          <CHART/>
+          <ELIGIBLE_CCR_POSITION/>
+          <ELIGIBLE_CCR_POSITION1/>
           <ELIGIBLE_CCR_POSITION2 EXPANDED="true"/>
+          <ELIGIBLE_CCR_POSITION_INNER/>
           <ELIGIBLE_POSITIONS ELIGIBLE_POSITIONS="QTY,DAYS,TRADE_PRICE,MARK_PRICE,MARK_CHANGE"/>
           <GROUPING_POS_STMT_SIZE_MODEL COMMON_COLUMN_RATIOS="0.3333333333333333;0.3333333333333333;0.3333333333333333" SECTION_RATIOS="0.15151515151515152;0.5252525252525253;0.32323232323232326">
             <MIDDLE_COLUMN_RATIOS>
@@ -781,6 +990,7 @@
           <ROLLING_STRATEGIES EXPANDED="true"/>
           <SWITCH POSITION="0"/>
         </ROLLING_STRATEGIES>
+        <ROLLOVER/>
         <SCANNER CRITERIA="WATCH:@7992311;EXCLUDE:;FILTER:CLOSE::9999;SHOW:STOCKS;SORT:SYMBOL;LIMIT:50;" INDICES_IL="SYMBOL:66:,DESCRIPTION:200:,LAST:67:,NET_CHANGE:66:,PERCENT_CHANGE:67:,VOLUME:66:,BID:67:,ASK:66:,HIGH:67:,LOW:66:,NAME:52:,MARKET_CAP:67:,VOL_INDEX:81:,&lt;arrow&gt;:11:F:F" LIMITS="CLOSE|N|Y" ORDER_ENTRY_EXPANDED="false">
           <ALL_COND_GROUP HEIGHT="40" HIDDEN="false"/>
           <ANY_COND_GROUP HEIGHT="40" HIDDEN="false"/>
@@ -793,17 +1003,30 @@
           <SHARED_CONFIG_FILTER_PANEL IS_DATE_RANGE_SELECTED="false"/>
           <SHARED_CONFIG_ITEMS_FILTER CREATED_BEFORE_DAY_ID="19319" ITEM_TYPES="GRID_GROUP,WORKSPACE_GROUP,WATCHLIST_GROUP,ORDER_TEMPLATE_GROUP,ALERT_TEMPLATE_GROUP,CHART_GROUP,QUERY_GROUP,SCRIPT_STUDY_GROUP,SCRIPT_STRATEGY_GROUP,SCRIPT_QUOTE_GROUP,SCRIPT_ALERT_GROUP,FLEXIBLE_GROUP,TREFIS_GROUP,FRED_GROUP,ORDER_GROUP,COLOR_SCHEME_GROUP,PHASE_SCORES_GROUP,SIMPLE_CHART_GROUP" MIGRATED_TO_ORDER_GROUP="true" PERIOD="-1" SHOW_HIDDEN="false" USER_NAME=""/>
         </SHARED_CONFIGS>
+        <SORTING/>
+        <SORTING1/>
+        <SORTING2/>
+        <SORTING3/>
+        <SORTING4/>
+        <SOUNDS/>
+        <SPREADS/>
+        <SPREAD_HACKER/>
+        <SYSTEM/>
+        <THINK_BACK/>
         <THINK_SCRIPT_IDE ORDER_ENTRY_EXPANDED="false" THINKSCRIPT_IDE_OPEN_TABS=""/>
         <TOOLS_GROUP ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="TRADER LOG"/>
-        <TOS_CHARTS COLUMN_COUNT="1" DEFAULT_TYPE="CHART" ORDER_ENTRY_EXPANDED="true" ROW_COUNT="1">
+        <TOS_CHARTS COLUMN_COUNT="1" DEFAULT_TYPE="CHART" ORDER_ENTRY_EXPANDED="false" ROW_COUNT="1">
           <CELL0 ROWSPANELWEIGHT="1.0" ROWWEIGHT0="1.0" ROWWEIGHT1="1.0" SELECTED_TYPE="CHART" SIDEBAR_IS_ACTIVE="true" SYMBOL="EUR/CHF" SYMBOL_GROUP="1" TRADE_BUTTONS_MIGRATED="true">
             <ACTIVETRADER VERTICAL="false" VISIBLE="false" WEIGHT="2.0"/>
             <BIG_BUTTONS VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
-            <CHART CONFIGURATION="@v9@%0:com.devexperts.toschart.model,1:com.devexperts.tos.chartdata,2:com.devexperts.toschart.control.subgraph,3:com.devexperts.toschart.script%owner{chartAggregationPeriods:ChartAggregationPeriodArray0{17::ChartAggregationPeriod0,18::ChartAggregationPeriod1},chartAggregationPeriods=@ChartAggregationPeriodArray0}#com.devexperts.toschart.core.ChartModel{encodedMixinsState=&quot;{\&quot;common\&quot;:{\&quot;DRAWING_SETS\&quot;:\&quot;{}\&quot;},\&quot;state_props\&quot;:{\&quot;state_type\&quot;:\&quot;REGULAR\&quot;},\&quot;monkey_bars_exp\&quot;:{\&quot;LikefolioMixin\&quot;:\&quot;{\\\&quot;paintingSettings\\\&quot;:{\\\&quot;neutralSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;positiveSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;negativeSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;sentimentSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true}},\\\&quot;shownDivisions\\\&quot;:[],\\\&quot;allDivisions\\\&quot;:[]}\&quot;},\&quot;monkey_bars\&quot;:{},\&quot;seasonality\&quot;:{},\&quot;regular\&quot;:{\&quot;DescriberMixin\&quot;:\&quot;{\\\&quot;visibility\\\&quot;:\\\&quot;HIDE_PANEL\\\&quot;,\\\&quot;studiesMode\\\&quot;:\\\&quot;HIDE_STUDIES\\\&quot;}\&quot;,\&quot;LikefolioMixin\&quot;:\&quot;{\\\&quot;paintingSettings\\\&quot;:{\\\&quot;neutralSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;positiveSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;negativeSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;sentimentSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true}},\\\&quot;shownDivisions\\\&quot;:[],\\\&quot;allDivisions\\\&quot;:[]}\&quot;}}&quot;,groupId=&quot;default&quot;,styleSettings{chartAggregationSettings{monkeyChartsAggSettings=!%0.TimeFrameAggregationSettings.createTickOrTimeAggregation(!%1.ChartRange.findByCode(&quot;DAY3&quot;),@ChartAggregationPeriod0),timeAggregationSettings=!%0.TimeFrameAggregationSettings.createTickOrTimeAggregation(!%1.ChartRange.findByCode(&quot;DAY20&quot;),@ChartAggregationPeriod1)},commonStyleSettings{manualAxisRegulator{maxValue=0.99794725d,minValue=0.96908822d},step=2.0833333333333335d,visibleBarsCount=480}},subgraphModels{!get(#%2.SubgraphId(&quot;Symbol&quot;)){height=454,storableIndicators{+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;\ninput pip_target = 20;\ninput pl_ratio = 2.0;\n\n\ndef pip_value = if close &gt; 100 then 0.01 else 0.0001;\ndef pip_stoploss = pip_target / pl_ratio;\n\ndef position_price = EntryPrice();\n\ndef take_profit = if high &gt; position_price and (high - position_price) / pip_value &gt;= pip_target then yes else no;\ndef stoploss = if low &lt; position_price and AbsValue((position_price - low) / pip_value) &gt;= pip_stoploss then yes else no;\n\ndef exit_price = if \n    take_profit then \n        position_price + pip_target * pip_value\n    else if stoploss then\n        position_price - pip_stoploss * pip_value\n    else 0;\n\nAddOrder(\n    OrderType.SELL_TO_CLOSE, \n    take_profit or stoploss, \n    price = exit_price, \n    name = if take_profit then \&quot;Take Profit\&quot; else \&quot;Stoploss\&quot;\n);&quot;,name=&quot;_9822dbb1_bc87_47c2_aa18_1158ccc080b4&quot;,scriptType=1})),+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;input price = close;\ninput ma_type = AverageType.EXPONENTIAL;\n\ninput period1 = 50;\ninput period2 = 100;\ninput period3 = 200;\n\ninput show_trigger = no;\ninput order_quantity = 10000;\ninput order_direction = {default BOTH, LONG, SHORT};\n\nplot ema1 = MovingAverage(ma_type, price, period1);\nplot ema2 = MovingAverage(ma_type, price, period2);\nplot ema3 = MovingAverage(ma_type, price, period3);\n\ndef trend = if \n        ema1 &gt; ema2 and ema2 &gt; ema3 then 1 \n    else if \n        ema1 &lt; ema2 and ema2 &lt; ema3 then -1\n    else 0;\n\nema1.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\nema2.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\nema3.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\ndef long_positions;\ndef short_positions;\nswitch (order_direction) {\n    case BOTH:\n        long_positions = yes;\n        short_positions = yes;\n    case LONG:\n        long_positions = yes;\n        short_positions = no;\n    case SHORT:\n        long_positions = no;\n        short_positions = yes;\n}\n\n\nplot buy_trigger = long_positions and trend is greater than trend from 1 bar ago and trend from 1 bar ago == 0;\nbuy_trigger.setPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_UP);\nbuy_trigger.setDefaultColor(Color.CYAN);\nbuy_trigger.setHiding(!show_trigger);\n\nplot sell_trigger = short_positions and trend is less than trend from 1 bar ago and trend from 1 bar ago == 0;\nsell_trigger.setPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_DOWN);\nsell_trigger.setDefaultColor(Color.ORANGE);\nsell_trigger.setHiding(!show_trigger);\n\n\ndef position_price = EntryPrice();\ndef order_size = if !isNaN(position_price) then order_quantity * 2 else order_quantity;\n\nAddOrder(OrderType.BUY_AUTO, buy_trigger, tradeSize=order_size);\nAddOrder(OrderType.SELL_AUTO, sell_trigger, tradeSize=order_size);&quot;,name=&quot;_3d156e5f_06af_4c0a_9a92_013989970b0a&quot;,scriptType=1}){inputsMap:TreeMap0{^(&quot;ma_type&quot;,&quot;HULL&quot;),^(&quot;order_direction&quot;,&quot;SHORT&quot;),^(&quot;period1&quot;,9),^(&quot;period2&quot;,21),^(&quot;period3&quot;,50),^(&quot;price&quot;,&quot;CLOSE&quot;)},inputsMap=@TreeMap0}),+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;\ninput pip_target = 20;\ninput pl_ratio = 2.0;\n\n\ndef pip_value = if close &gt; 100 then 0.01 else 0.0001;\ndef pip_stoploss = pip_target / pl_ratio;\n\ndef position_price = EntryPrice();\n\ndef take_profit = if low &lt; position_price and (position_price - low) / pip_value &gt;= pip_target then yes else no;\n\ndef stoploss = if high &gt; position_price and (high - position_price) / pip_value &gt;= pip_stoploss then yes else no;\n\ndef exit_price = if \n    take_profit then \n        position_price - pip_target * pip_value\n    else if stoploss then\n        position_price + pip_stoploss * pip_value\n    else 0;\n\nAddOrder(\n    OrderType.BUY_TO_CLOSE, \n    take_profit or stoploss, \n    price = exit_price,\n    name = if take_profit then \&quot;Take Profit\&quot; else \&quot;Stoploss\&quot;\n);&quot;,name=&quot;_d26cfd12_5a48_44e0_ab08_840a30710ab8&quot;,scriptType=1}))}},!get(#%2.SubgraphId(&quot;Volume&quot;)){height=80},^(#%2.SubgraphId(&quot;Subgraph1&quot;),#%2.SubgraphStorableModel{height=183,storableIndicators.+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;# @new\n# @reference\n#\n# TD Ameritrade IP Company, Inc. (c) 2012\n#\ndeclare lower;\n\nplot FPL = FPL();\nplot ZeroLine = 0;\n\nFPL.SetPaintingStrategy(PaintingStrategy.SQUARED_HISTOGRAM);\nFPL.DefineColor(\&quot;Positive and Up\&quot;, Color.GREEN);\nFPL.DefineColor(\&quot;Positive and Down\&quot;, Color.DARK_GREEN);\nFPL.DefineColor(\&quot;Negative and Down\&quot;, Color.RED);\nFPL.DefineColor(\&quot;Negative and Up\&quot;, Color.DARK_RED);\nFPL.AssignValueColor(if FPL &gt;= 0 then if FPL &gt; FPL[1] then FPL.Color(\&quot;Positive and Up\&quot;) else FPL.Color(\&quot;Positive and Down\&quot;) else if FPL &lt; FPL[1] then FPL.Color(\&quot;Negative and Down\&quot;) else FPL.Color(\&quot;Negative and Up\&quot;));\nZeroLine.SetDefaultColor(Color.GRAY);&quot;,name=&quot;FloatingPL&quot;}))})}}" SHARED_USER_SCRIPTS="@v9@owner{chartAggregationPeriods:ChartAggregationPeriodArray0,chartAggregationPeriods=@ChartAggregationPeriodArray0}#java.util.HashMap" SYMBOL="EUR/CHF" SYMBOL_GROUP="1" VERTICAL="false" VISIBLE="true" WEIGHT="3.0"/>
+            <CHART CONFIGURATION="@v9@%0:com.devexperts.toschart.model,1:com.devexperts.tos.chartdata,2:com.devexperts.toschart.control.subgraph,3:com.devexperts.toschart.script%owner{chartAggregationPeriods:ChartAggregationPeriodArray0{17::ChartAggregationPeriod0,9::ChartAggregationPeriod1},chartAggregationPeriods=@ChartAggregationPeriodArray0}#com.devexperts.toschart.core.ChartModel{encodedMixinsState=&quot;{\&quot;common\&quot;:{\&quot;DRAWING_SETS\&quot;:\&quot;{}\&quot;},\&quot;state_props\&quot;:{\&quot;state_type\&quot;:\&quot;REGULAR\&quot;},\&quot;monkey_bars_exp\&quot;:{\&quot;LikefolioMixin\&quot;:\&quot;{\\\&quot;paintingSettings\\\&quot;:{\\\&quot;neutralSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;positiveSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;negativeSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;sentimentSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true}},\\\&quot;shownDivisions\\\&quot;:[],\\\&quot;allDivisions\\\&quot;:[]}\&quot;},\&quot;monkey_bars\&quot;:{},\&quot;seasonality\&quot;:{},\&quot;regular\&quot;:{\&quot;DescriberMixin\&quot;:\&quot;{\\\&quot;visibility\\\&quot;:\\\&quot;HIDE_PANEL\\\&quot;,\\\&quot;studiesMode\\\&quot;:\\\&quot;HIDE_STUDIES\\\&quot;}\&quot;,\&quot;LikefolioMixin\&quot;:\&quot;{\\\&quot;paintingSettings\\\&quot;:{\\\&quot;neutralSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;positiveSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;negativeSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true},\\\&quot;sentimentSettings\\\&quot;:{\\\&quot;visible\\\&quot;:true}},\\\&quot;shownDivisions\\\&quot;:[],\\\&quot;allDivisions\\\&quot;:[]}\&quot;}}&quot;,groupId=&quot;default&quot;,styleSettings{chartAggregationSettings{monkeyChartsAggSettings=!%0.TimeFrameAggregationSettings.createTickOrTimeAggregation(!%1.ChartRange.findByCode(&quot;DAY3&quot;),@ChartAggregationPeriod0),priceAggregationSettings.timePeriod:ChartRange0,timeAggregationSettings=!%0.TimeFrameAggregationSettings.createTickOrTimeAggregation(@ChartRange0,@ChartAggregationPeriod1)},commonStyleSettings{manualAxisRegulator{maxValue=0.98644249d,minValue=0.97812751d},step=0.8658008658008658d}},subgraphModels{!get(#%2.SubgraphId(&quot;Symbol&quot;)){height=676,storableIndicators{+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;input pips = 10;\n\ndef pip_value = if close &gt; 100 then 0.01 else 0.0001;\n\ndef position_price = EntryPrice();\ndef stoploss_price = position_price - pips * pip_value;\n\ndef stoploss_hit = if \n    !isNaN(position_price) \n    and low &lt; position_price \n    and (position_price - low) / pip_value &gt;= pips then yes \n    else no;\n\nAddOrder(OrderType.SELL_TO_CLOSE, stoploss_hit, price=stoploss_price, name = \&quot;STOPLOSS\&quot;);&quot;,name=&quot;_c8803013_4fa4_4fd9_8480_e969d93a60e7&quot;,scriptType=1})),+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;input price = close;\ninput ma_type = AverageType.EXPONENTIAL;\n\ninput period1 = 50;\ninput period2 = 100;\ninput period3 = 200;\n\ninput show_trigger = no;\ninput order_quantity = 10000;\n\nplot ema1 = MovingAverage(ma_type, price, period1);\nplot ema2 = MovingAverage(ma_type, price, period2);\nplot ema3 = MovingAverage(ma_type, price, period3);\n\ndef trend = if \n        ema1 &gt; ema2 and ema2 &gt; ema3 then 1 \n    else if \n        ema1 &lt; ema2 and ema2 &lt; ema3 then -1\n    else 0;\n\nema1.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\nema2.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\nema3.assignValueColor(\n    if \n        trend == 1 then Color.GREEN \n    else if \n        trend == -1 then Color.RED \n    else Color.GRAY\n);\n\nplot buy_trigger = trend is greater than trend from 1 bar ago and trend from 1 bar ago == 0;\nbuy_trigger.setPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_UP);\nbuy_trigger.setDefaultColor(Color.CYAN);\nbuy_trigger.setHiding(!show_trigger);\n\nplot sell_trigger = trend is less than trend from 1 bar ago and trend from 1 bar ago == 0;\nsell_trigger.setPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_DOWN);\nsell_trigger.setDefaultColor(Color.ORANGE);\nsell_trigger.setHiding(!show_trigger);\n\n\ndef position_price = EntryPrice();\ndef order_size = if !isNaN(position_price) then order_quantity * 2 else order_quantity;\n\nAddOrder(OrderType.BUY_AUTO, buy_trigger, tradeSize=order_size);\nAddOrder(OrderType.SELL_AUTO, sell_trigger, tradeSize=order_size);&quot;,name=&quot;_3d156e5f_06af_4c0a_9a92_013989970b0a&quot;,scriptType=1}){inputsMap:TreeMap0{^(&quot;ma_type&quot;,&quot;SIMPLE&quot;),^(&quot;price&quot;,&quot;CLOSE&quot;)},inputsMap=@TreeMap0}),+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;input pips = 10;\n\ndef pip_value = if close &gt; 100 then 0.01 else 0.0001;\n\ndef position_price = EntryPrice();\ndef stoploss_price = position_price + pips * pip_value;\n\ndef stoploss_hit = if \n    !isNaN(position_price) \n    and high &gt; position_price \n    and (high - position_price) / pip_value &gt;= pips then yes \n    else no;\n\nAddOrder(OrderType.BUY_TO_CLOSE, stoploss_hit, price=stoploss_price, name = \&quot;STOPLOSS_SX\&quot;);&quot;,name=&quot;_4ddac3e2_c53c_423e_9298_a4d1fea242ff&quot;,scriptType=1}))}},!get(#%2.SubgraphId(&quot;Volume&quot;)){height=80},^(#%2.SubgraphId(&quot;Subgraph1&quot;),#%2.SubgraphStorableModel{height=271,storableIndicators.+(!com.devexperts.toschart.elstudies.CompiledStudy.resolveStudy(#%3.ScriptEssence{body=&quot;# @new\n# @reference\n#\n# TD Ameritrade IP Company, Inc. (c) 2012\n#\ndeclare lower;\n\nplot FPL = FPL();\nplot ZeroLine = 0;\n\nFPL.SetPaintingStrategy(PaintingStrategy.SQUARED_HISTOGRAM);\nFPL.DefineColor(\&quot;Positive and Up\&quot;, Color.GREEN);\nFPL.DefineColor(\&quot;Positive and Down\&quot;, Color.DARK_GREEN);\nFPL.DefineColor(\&quot;Negative and Down\&quot;, Color.RED);\nFPL.DefineColor(\&quot;Negative and Up\&quot;, Color.DARK_RED);\nFPL.AssignValueColor(if FPL &gt;= 0 then if FPL &gt; FPL[1] then FPL.Color(\&quot;Positive and Up\&quot;) else FPL.Color(\&quot;Positive and Down\&quot;) else if FPL &lt; FPL[1] then FPL.Color(\&quot;Negative and Down\&quot;) else FPL.Color(\&quot;Negative and Up\&quot;));\nZeroLine.SetDefaultColor(Color.GRAY);&quot;,name=&quot;FloatingPL&quot;}))})}}" SHARED_USER_SCRIPTS="@v9@owner{chartAggregationPeriods:ChartAggregationPeriodArray0,chartAggregationPeriods=@ChartAggregationPeriodArray0}#java.util.HashMap" SYMBOL="EUR/CHF" SYMBOL_GROUP="1" VERTICAL="false" VISIBLE="true" WEIGHT="3.0"/>
             <DASHBOARD VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <LEVEL_II VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <LIVE_NEWS VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <PHASE_SCORES VERTICAL="false" VISIBLE="false" WEIGHT="2.0"/>
+            <SORTING/>
+            <SORTING1/>
+            <SORTING2/>
             <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
             <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
               <OCO_STOP>
@@ -889,17 +1112,31 @@
               <TIME_SALES VERTICAL="false" VISIBLE="false" WEIGHT="1.0"/>
               <TRADE CONFIGURATION_NAME="SINGLE" ORDER_RULES_SET="FOREX" ORDER_TYPE="LIMIT" OS_AUTO="false" OS_EXPANDED="false" OS_TIF="GTC" QTY="10000.0" QTY_STEP="10000.0" TEMPLATE="SINGLE" TRADE_BUTTONS="BUY_MKT;SELL_MKT;MULTI_CANCEL;REVERSE;FLAT;SECOND_LINE;QUANTITY;AUTO_SEND;ORDER_SETUP" VISIBLE="false">
                 <OCO_STOP>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="ASK_BID" TRG_OFFSET_MODE="TICK" TRG_OT="STOP" TRG_SETUP="10.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
                 </OCO_STOP>
-                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY"/>
-                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY"/>
+                <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_0>
+                <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-1.0" TRG_TIF="DAY">
+                  <OFFSET_PER_SYMBOL/>
+                </TRG_1>
                 <_2>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-2.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_2>
                 <_3>
-                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY"/>
-                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY"/>
+                  <TRG_0 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="LIMIT" TRG_SETUP="3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_0>
+                  <TRG_1 TRG_ENBL="true" TRG_LINK="TRG" TRG_OFFSET_MODE="ABSOLUTE" TRG_OT="STOP" TRG_SETUP="-3.0" TRG_TIF="DAY">
+                    <OFFSET_PER_SYMBOL/>
+                  </TRG_1>
                 </_3>
               </TRADE>
             </CELL0>
@@ -968,8 +1205,11 @@
           <UNDERLYING1 EXPANDED="true"/>
           <UNDERLYING_PANEL FUTURES_DISPLAYING_MODE="ACTIVE ONLY"/>
         </TRADE>
+        <TRADER_INTERFACE/>
         <TRADER_LOG ORDER_ENTRY_EXPANDED="false"/>
         <TRADE_GROUP ORDER_ENTRY_EXPANDED="false" SELECTED_LAYOUT="TRADE"/>
+        <VIDEOS/>
+        <VISUALIZE/>
         <VOICE_CHAT PLAYBACK_LAST_VOLUME_BEFORE_MUTED="1.0" PLAYBACK_VOLUME="1.0" RECORDING_LAST_VOLUME_BEFORE_MUTED="1.0" RECORDING_VOLUME="1.0"/>
         <VOLATILITY_ANALYSIS DELTA_SUBGRAPH="false" HIGHLIGHT_TICKS="false" LOCK_TIME_AXIS="false" ORDER_ENTRY_EXPANDED="false" PALETTE="ff66ff,ffff,ff7e9c,b5b5b5,e7be00,ff5f5f,c531,797979,f9e9a7,ffffff,ff7e00,c0bfff,f6bcb3,74bde8,ea88ff,8fefbf" PERCENT_AXIS="false" PRODUCT_DEPTH_MODE="OPTIONS" SYMBOL="GE" SYMBOL_GROUP="-1">
           <COMBO_CHECK_BOX COLORS="0,1,2,3,4,5,6,7,8,9,10" SELECTION="0,1,2,3,4,5,6,7,8,9,10"/>
@@ -977,6 +1217,7 @@
           <OPTIONS_CHART_CONTROLS STRIKE_COUNT="All" VALUE="OPEN_INT" VALUE2="IMPL_VOL" VIEW="ALL"/>
         </VOLATILITY_ANALYSIS>
       </DESKTOP>
+      <DESKTOP_ROOT/>
       <LINES LEVEL="Beginner" RAPID="false"/>
       <MESSAGE_CENTER_LAYOUT>
         <SORTING COLUMN="TIME" ORDER="1"/>
@@ -984,8 +1225,5 @@
       <MINESWEEPER BOMBS="10" COLUMNS="9" LEVEL="Beginner" QMARK="false" ROWS="9"/>
       <TETRIS LEVEL="Beginner" ROTATE="false"/>
     </DETACHED_FRAME_0>
-    <MESSAGE_CENTER_MESSAGES MESSAGE_CENTER_MESSAGES_COUNT="0"/>
-    <ORDER_RULE_DIALOG X="2451" Y="165"/>
-    <TASTY_TRADE_DISPLAY_IS_CONFIRMED TASTY_TRADE_DISPLAY_IS_CONFIRMED="false"/>
   </WORKSPACE>
 </PREFERENCES>
