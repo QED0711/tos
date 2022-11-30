@@ -1,0 +1,51 @@
+script TS_3_MA_TREND{
+
+    # USER INPUTS
+    input price = close;
+    input ma_type = AverageType.SIMPLE;
+
+    input period1 = 50;
+    input period2 = 100;
+    input period3 = 200;
+
+    input show_label = no;
+
+    # MA PLOTS
+    plot ma1 = MovingAverage(ma_type, price, period1);
+    plot ma2 = MovingAverage(ma_type, price, period2);
+    plot ma3 = MovingAverage(ma_type, price, period3);
+
+    # DETERMINE IF TRENDING
+    def trend = if 
+            ma1 > ma2 and ma2 > ma3 then 1 
+        else if 
+            ma1 < ma2 and ma2 < ma3 then -1
+        else 0;
+
+    # ASSIGN APPEARANCE BASED ON TREND
+    ma1.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+    ma2.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+    ma3.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+    AddLabel(show_label, if trend == 1 then "UP TREND" else if trend == -1 then "DOWN TREND" else "--", if trend == 1 then Color.GREEN else if trend == -1 then Color.RED else Color.GRAY);
+}
