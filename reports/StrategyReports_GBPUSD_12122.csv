@@ -1,0 +1,27 @@
+Strategy report
+Symbol: GBP/USD
+Work Time: 11/10/22, 11:00 AM - 11/30/22, 8:20 AM
+
+
+Id;Strategy;Side;Amount;Price;Date/Time;Trade P/L;P/L;Position;
+1;TS_5_MIN_TREND(LONG_ENTRY);Buy to Open;10000.0;$1.16799;11/10/22, 11:00 AM;;($5.80);10000.0;
+2;TS_5_MIN_TREND(<<-13.90 pips>>);Sell to Close;-10000.0;$1.1666;11/10/22, 11:10 AM;($13.90);($13.90);0.0;
+3;TS_5_MIN_TREND(<<NaN pips>>);Sell to Close;-10000.0;$1.18957;11/15/22, 8:30 AM;$8.90;($93.80);-10000.0;
+4;TS_5_MIN_TREND(LONG_ENTRY);Buy to Open;10000.0;$1.18868;11/15/22, 8:30 AM;;($5.00);0.0;
+5;TS_5_MIN_TREND(SHORT ENTRY);Sell to Open;-10000.0;$1.17724;11/17/22, 11:20 AM;;($3.10);-10000.0;
+6;TS_5_MIN_TREND(<<-15.00 pips>>);Buy to Close;10000.0;$1.17874;11/17/22, 11:45 AM;($15.00);($20.00);0.0;
+7;TS_5_MIN_TREND(<<-NaN pips>>);Buy to Close;10000.0;$1.18102;11/21/22, 8:05 AM;($6.40);($24.10);10000.0;
+8;TS_5_MIN_TREND(SHORT ENTRY);Sell to Open;-10000.0;$1.18038;11/21/22, 8:05 AM;;($26.40);0.0;
+9;TS_5_MIN_TREND(LONG_ENTRY);Buy to Open;10000.0;$1.18779;11/22/22, 10:05 AM;;($34.00);10000.0;
+10;TS_5_MIN_TREND(<<11.40 pips>>);Sell to Close;-10000.0;$1.18893;11/22/22, 10:55 AM;$11.40;($15.00);0.0;
+11;TS_5_MIN_TREND(SHORT ENTRY);Sell to Open;-10000.0;$1.20512;11/28/22, 9:45 AM;;($18.40);-10000.0;
+12;TS_5_MIN_TREND(<<-13.20 pips>>);Buy to Close;10000.0;$1.20644;11/28/22, 10:20 AM;($13.20);($28.20);0.0;
+13;TS_5_MIN_TREND(<<NaN pips>>);Sell to Close;-10000.0;$1.20098;11/30/22, 8:20 AM;$3.00;($30.40);-10000.0;
+14;TS_5_MIN_TREND(LONG_ENTRY);Buy to Open;10000.0;$1.20068;11/30/22, 8:20 AM;;($25.20);0.0;
+
+
+Max trade P/L: $11.40;
+
+Total P/L: ($25.20);
+
+Total order(s): 7;
