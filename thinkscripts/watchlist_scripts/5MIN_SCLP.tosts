@@ -1,0 +1,162 @@
+########### SCRIPTS ###########
+script TS_FX_SESSION {
+    declare hide_on_daily;
+
+    input session = {default US_LONDON, SYDNEY_TOKYO, LONDON_TOKYO};
+
+    def opn;
+    def cls;
+    def show = yes;
+
+    switch(session){
+        case US_LONDON:
+            opn = 0800;
+            cls = 1200;
+        case SYDNEY_TOKYO:
+            opn = 0800;
+            cls = 1200;
+        case LONDON_TOKYO:
+            opn = 0800;
+            cls = 1200;
+    }
+
+    plot session_active = SecondsFromTime(opn) >= 0 and SecondsFromTime(cls) < 0;
+    
+}
+
+script TS_PIP_VALUE {
+    plot pip_value = if 
+        GetSymbol() == "EUR/JPY"
+        or GetSymbol() == "GBP/JPY" 
+        or GetSymbol() == "USD/JPY"
+    then 0.01 else 0.0001;
+}
+
+
+script TS_3_MA_TREND{
+
+    # USER INPUTS
+    input price = close;
+    input ma_type = AverageType.WILDERS;
+
+    input period1 = 50;
+    input period2 = 100;
+    input period3 = 200;
+
+    input show_label = no;
+
+    # MA PLOTS
+    plot ma1 = MovingAverage(ma_type, price, period1);
+    plot ma2 = MovingAverage(ma_type, price, period2);
+    plot ma3 = MovingAverage(ma_type, price, period3);
+
+    # DETERMINE IF TRENDING
+    def trend = if 
+            ma1 > ma2 and ma2 > ma3 then 1 
+        else if 
+            ma1 < ma2 and ma2 < ma3 then -1
+        else 0;
+
+    # ASSIGN APPEARANCE BASED ON TREND
+    ma1.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+    ma2.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+    ma3.assignValueColor(
+        if 
+            trend == 1 then Color.GREEN 
+        else if 
+            trend == -1 then Color.RED 
+        else Color.GRAY
+    );
+
+}
+
+##################################
+########## BEGIN SCRIPT ##########
+##################################
+
+# INPUTS
+input ma_type = AverageType.WILDERS;
+input period1 = 21;
+input period2 = 50;
+input period3 = 200;
+input rsi_period = 14;
+input max_pip_risk = 30;
+input risk_reward_ratio = 2;
+
+# SUB-SCRIPT VARIABLES
+def session_active = TS_FX_SESSION().session_active;
+def pip_value = TS_PIP_VALUE().pip_value;
+def ma1 = TS_3_MA_TREND(
+    ma_type=ma_type, 
+    period1=period1, 
+    period2=period2, 
+    period3=period3
+).ma1;
+def ma2 = TS_3_MA_TREND(
+    ma_type=ma_type, 
+    period1=period1, 
+    period2=period2, 
+    period3=period3
+).ma2;
+def ma3 = TS_3_MA_TREND(
+    ma_type=ma_type, 
+    period1=period1, 
+    period2=period2, 
+    period3=period4
+).ma3;
+def trending = TS_3_MA_TREND(
+    ma_type=ma_type, 
+    period1=period1, 
+    period2=period2, 
+    period3=period3
+).trend;
+
+
+# PLOTS AND LOGIC
+def in_position = !isNaN(EntryPrice());
+
+def rsi = RSI(rsi_period).rsi;
+
+def green_engulfing = Engulfing().bullish;
+def red_engulfing = Engulfing().bearish;
+
+
+def buy_trigger = !in_position and session_active and trending == 2 and green_engulfing and rsi > 50;
+def sell_trigger = !in_position and session_active and trending == 0 and red_engulfing and rsi < 50;
+
+AddLabel(
+    yes, 
+    text=if buy_trigger then "BUY" else if sell_trigger then "SELL" else "--",
+    color=if buy_trigger then Color.GREEN else if sell_trigger then Color.RED else Color.YELLOW
+);
+
+plot trigger = buy_trigger or sell_trigger;
+
+#buy_trigger.SetPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_UP);
+#buy_trigger.SetDefaultColor(Color.CYAN);
+#sell_trigger.SetPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_DOWN);
+#sell_trigger.SetDefaultColor(Color.RED);
+
+
+
+
+
+
+
+
+
+

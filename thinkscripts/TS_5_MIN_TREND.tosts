@@ -1,0 +1,53 @@
+
+script TS_FX_SESSION {
+    declare hide_on_daily;
+
+    input session = {default US_LONDON, SYDNEY_TOKYO, LONDON_TOKYO};
+
+    def opn;
+    def cls;
+    def show = yes;
+
+    switch(session){
+        case US_LONDON:
+            opn = 0800;
+            cls = 1200;
+        case SYDNEY_TOKYO:
+            opn = 0800;
+            cls = 1200;
+        case LONDON_TOKYO:
+            opn = 0800;
+            cls = 1200;
+    }
+
+    #if GetSymbol() == "AUD/USD" {
+    #    opn = 1900;
+    #    cls = 0430;
+    #    show = yes;
+    #} else {
+    #    opn = 0;
+    #    cls = 0;
+    #    show = no;
+    #}
+
+    AddVerticalLine(
+        show and secondsFromTime(opn)[1] < 0 and secondsFromTime(opn) >= 0, 
+        "SESSION OPEN", 
+        Color.CYAN
+    );
+    AddVerticalLine(
+        show and secondsFromTime(cls)[1] < 0 and secondsFromTime(cls) >= 0, 
+        "SESSION CLOSE", 
+        Color.RED
+    );
+}
+
+def rsi = RSI(14).rsi;
+
+plot bearish_engulfing = Engulfing().bearish;
+plot bullish_engulfing = Engulfing().bullish;
+
+bearish_engulfing.SetPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_DOWN);
+bullish_engulfing.SetPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_UP);
+bearish_engulfing.SetDefaultColor(Color.RED);
+bullish_engulfing.SetDefaultColor(Color.CYAN);
