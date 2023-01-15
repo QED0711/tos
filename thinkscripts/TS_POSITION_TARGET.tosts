@@ -1,0 +1,44 @@
+input risk_target_type = {default MINI_PIPS, ATR};
+input target_multiplier = 1.0;
+input account_value = 0.0;
+
+input direction = {default LONG, SHORT};
+input risk_percent = 0.01;
+input profit_ratio = 2.0;
+
+input EURGBP_mini = 1.19;
+input USDJPY_mini = 0.71;
+
+input show_plot = {default SHOW, HIDE};
+input show_label = {default SHOW, HIDE};
+
+############### CONSTANTS SETUP ############### 
+def risk_amount = account_value * risk_percent;
+def profit_amount = risk_amount * profit_ratio;
+
+############### TARGET SETUP ############### 
+input atr_period = 16;
+input atr_average_type = AverageType.WILDERS;
+def atr_value = ATR(atr_period, atr_average_type);
+
+############### SYMBOL SPECIFIC SETUP ############### 
+def mini_pip = 
+    if GetSymbol() == "EUR/GBP" then EURGBP_mini
+    else if GetSymbol() == "USD/JPY" then USDJPY_mini
+    else 1.0;
+
+def pip_value = if GetSymbol() == "USD/JPY" then 0.01 else 0.0001;
+def fill_price = close;
+
+def stoploss_price;
+switch(risk_target_type){
+    case "MINI_PIPS":
+        stoploss_price = if direction == direction.LONG then fill_price - pip_value * target_multiplier else fill_price + mini_pip * target_multiplier;
+    case "ATR":
+        stoploss_price = if direction == direction.LONG then fill_price - atr_value * target_multiplier else fill_price + atr_value * target_multiplier;
+};
+
+def pips_to_stoploss_price = ABSValue(fill_price - stoploss_price) / pip_value;
+AddLabel(yes, AsText(ABSValue(fill_price - stoploss_price)), Color.CYAN);
+AddLabel(yes, AsText(pips_to_stoploss_price), Color.CYAN);
+plot stoploss = stoploss_price;

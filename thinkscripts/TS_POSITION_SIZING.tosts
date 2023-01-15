@@ -1,0 +1,113 @@
+input show_plot = {default SHOW, HIDE};
+input show_label = {default SHOW, HIDE};
+input direction = {default LONG, SHORT, BOTH};
+input account_value = 0.0;
+
+input risk_percent = 0.01;
+input profit_ratio = 2.0;
+
+input position_mini_lots_1 = 1;
+input position_mini_lots_2 = 2;
+input position_mini_lots_3 = 3;
+
+def position_size_1 = position_mini_lots_1 * 10000;
+def position_size_2 = position_mini_lots_2 * 10000;
+def position_size_3 = position_mini_lots_3 * 10000;
+
+input EURGBP_mini = 1.19;
+input USDJPY_mini = 7.78;
+#input AUDUSD_mini = 1.0;
+#input EURUSD_mini = 1.0;
+#input GBPUSD_mini = 1.0;
+#input NZDUSD_mini = 1.0;
+#input USDCAD_mini = 1.0;
+
+def mini_pip = 
+    if GetSymbol() == "EUR/GBP" then EURGBP_mini
+    else if GetSymbol() == "USD/JPY" then USDJPY_mini
+    else 1.0;
+
+
+def pip_value = if GetSymbol() == "USD/JPY" then 0.01 else 0.0001;
+
+def risk_amount = account_value * risk_percent;
+def profit_amount = risk_amount * profit_ratio;
+
+
+def fill_price = close;
+
+##### LONG CALCULATION #####
+
+plot long_stoploss_1 = fill_price - (risk_amount / (mini_pip * (position_size_1 / 10000.0))) * pip_value;
+plot long_stoploss_2 = fill_price - (risk_amount / (mini_pip * (position_size_2 / 10000.0))) * pip_value;
+plot long_stoploss_3 = fill_price - (risk_amount / (mini_pip * (position_size_3 / 10000.0))) * pip_value;
+
+plot long_profit_1 = fill_price + (profit_amount / (mini_pip * (position_size_1 / 10000.0))) * pip_value;
+plot long_profit_2 = fill_price + (profit_amount / (mini_pip * (position_size_2 / 10000.0))) * pip_value;
+plot long_profit_3 = fill_price + (profit_amount / (mini_pip * (position_size_3 / 10000.0))) * pip_value;
+
+long_stoploss_1.setDefaultColor(Color.DARK_GRAY);
+long_stoploss_2.setDefaultColor(Color.DARK_GRAY);
+long_stoploss_3.setDefaultColor(Color.DARK_GRAY);
+
+long_stoploss_1.setStyle(Curve.POINTS);
+long_stoploss_2.setStyle(Curve.POINTS);
+long_stoploss_3.setStyle(Curve.POINTS);
+
+long_stoploss_1.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+long_stoploss_2.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+long_stoploss_3.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+
+long_profit_1.setDefaultColor(Color.LIGHT_GRAY);
+long_profit_2.setDefaultColor(Color.LIGHT_GRAY);
+long_profit_3.setDefaultColor(Color.LIGHT_GRAY);
+
+long_profit_1.setStyle(Curve.POINTS);
+long_profit_2.setStyle(Curve.POINTS);
+long_profit_3.setStyle(Curve.POINTS);
+
+long_profit_1.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+long_profit_2.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+long_profit_3.setHiding(show_plot == show_plot.HIDE or direction == direction.SHORT);
+
+AddLabel(
+    show_label == show_label.SHOW and direction != direction.SHORT,
+    "LONG POS: " + AsText(position_size_1) + ":",
+    Color.LIGHT_GREEN
+);
+
+##### SHORT CALCULATION #####
+
+plot short_stoploss_1 = fill_price + (risk_amount / (mini_pip * (position_size_1 / 10000.0))) * pip_value;
+plot short_stoploss_2 = fill_price + (risk_amount / (mini_pip * (position_size_2 / 10000.0))) * pip_value;
+plot short_stoploss_3 = fill_price + (risk_amount / (mini_pip * (position_size_3 / 10000.0))) * pip_value;
+
+plot short_profit_1 = fill_price - (profit_amount / (mini_pip * (position_size_1 / 10000.0))) * pip_value;
+plot short_profit_2 = fill_price - (profit_amount / (mini_pip * (position_size_2 / 10000.0))) * pip_value;
+plot short_profit_3 = fill_price - (profit_amount / (mini_pip * (position_size_3 / 10000.0))) * pip_value;
+
+short_stoploss_1.setDefaultColor(Color.DARK_GRAY);
+short_stoploss_2.setDefaultColor(Color.DARK_GRAY);
+short_stoploss_3.setDefaultColor(Color.DARK_GRAY);
+
+short_stoploss_1.setStyle(Curve.POINTS);
+short_stoploss_2.setStyle(Curve.POINTS);
+short_stoploss_3.setStyle(Curve.POINTS);
+
+short_stoploss_1.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+short_stoploss_2.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+short_stoploss_3.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+
+short_profit_1.setDefaultColor(Color.LIGHT_GRAY);
+short_profit_2.setDefaultColor(Color.LIGHT_GRAY);
+short_profit_3.setDefaultColor(Color.LIGHT_GRAY);
+
+short_profit_1.setStyle(Curve.POINTS);
+short_profit_2.setStyle(Curve.POINTS);
+short_profit_3.setStyle(Curve.POINTS);
+
+short_profit_1.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+short_profit_2.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+short_profit_3.setHiding(show_plot == show_plot.HIDE or direction == direction.LONG);
+
+
