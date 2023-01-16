@@ -39,6 +39,15 @@ switch(risk_target_type){
 };
 
 def pips_to_stoploss_price = ABSValue(fill_price - stoploss_price) / pip_value;
-AddLabel(yes, AsText(ABSValue(fill_price - stoploss_price)), Color.CYAN);
-AddLabel(yes, AsText(pips_to_stoploss_price), Color.CYAN);
+def pips_to_profit_price = pips_to_stoploss_price * profit_ratio;
+
+
+def mini_lot_position_size = Floor((risk_amount / pips_to_stoploss_price) / mini_pip);
+
+AddLabel(yes, "Maximum Position Size: " + AsText(mini_lot_position_size) + " mini lots", Color.MAGENTA);
+
+
+
 plot stoploss = stoploss_price;
+
+
