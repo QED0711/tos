@@ -1,0 +1,44 @@
+input show_plot = {default SHOW, HIDE};
+input direction = {default LONG, SHORT};
+
+input account_value = 0.0;
+input mini_lot_quantity = 1;
+ 
+input limit_price = 0.0;
+input risk_percent = 0.01;
+input profit_ratio = 2.0;
+
+input EURGBP_mini = 1.19;
+input USDJPY_mini = 0.71;
+
+############### SYMBOL SPECIFIC SETUP ############### 
+def mini_pip = 
+    if GetSymbol() == "EUR/GBP" then EURGBP_mini
+    else if GetSymbol() == "USD/JPY" then USDJPY_mini
+    else 1.0;
+
+def pip_value = if GetSymbol() == "USD/JPY" then 0.01 else 0.0001;
+
+############### CALCULATIONS ############### 
+def risk_amount = account_value * risk_percent;
+def profit_amount = risk_amount * profit_ratio;
+
+def stoploss_price = 
+   if direction == direction.LONG then limit_price - (risk_amount / (mini_pip * mini_lot_quantity)) * pip_value
+   else limit_price + (risk_amount / (mini_pip * mini_lot_quantity)) * pip_value;
+
+def profit_price = 
+    if direction == direction.LONG then limit_price + (profit_ratio / (mini_pip * mini_lot_quantity)) * pip_value
+    else limit_price - (profit_ratio / (mini_pip * mini_lot_quantity)) * pip_value;
+
+
+############### PLOTS ############### 
+plot fill_level = limit_price;
+plot stoploss_level = stoploss_price;
+plot profit_level = profit_price;
+
+fill_level.setDefaultColor(Color.GRAY);
+stoploss_level.setDefaultColor(Color.MAGENTA);
+profit_level.setDefaultColor(Color.CYAN);
+
+AddLabel(yes, "Limit Price: " + AsText(limit_price) + " Risk Amount: " + AsText(risk_amount) + " Profit Amount: " + AsText(profit_amount) + " Stoploss: " + AsText(stoploss_price) + " Profit Price: " + AsText(profit_price));
