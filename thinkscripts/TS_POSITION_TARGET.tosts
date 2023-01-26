@@ -30,24 +30,41 @@ def mini_pip =
 def pip_value = if GetSymbol() == "USD/JPY" then 0.01 else 0.0001;
 def fill_price = close;
 
-def stoploss_price;
+def long_stoploss_price;
+def short_stoploss_price;
 switch(risk_target_type){
     case "MINI_PIPS":
-        stoploss_price = if direction == direction.LONG then fill_price - pip_value * target_multiplier else fill_price + mini_pip * target_multiplier;
+        long_stoploss_price = fill_price - pip_value * target_multiplier; 
+        short_stoploss_price = fill_price + pip_value * target_multiplier;
     case "ATR":
-        stoploss_price = if direction == direction.LONG then fill_price - atr_value * target_multiplier else fill_price + atr_value * target_multiplier;
+        long_stoploss_price = fill_price - atr_value * target_multiplier; 
+        short_stoploss_price = fill_price + atr_value * target_multiplier;
 };
 
-def pips_to_stoploss_price = ABSValue(fill_price - stoploss_price) / pip_value;
+def pips_to_stoploss_price = (fill_price - long_stoploss_price) / pip_value;
 def pips_to_profit_price = pips_to_stoploss_price * profit_ratio;
 
 
 def mini_lot_position_size = Floor((risk_amount / pips_to_stoploss_price) / mini_pip);
 
+
+plot long_stoploss = long_stoploss_price;
+plot long_profit = fill_price + (fill_price - long_stoploss_price) * profit_ratio;
+plot short_stoploss = short_stoploss_price;
+plot short_profit = fill_price - (short_stoploss_price - fill_price) * profit_ratio;
+
+AddLabel(yes, AsText(short_stoploss_price));
+
+long_stoploss.setPaintingStrategy(PaintingStrategy.TRIANGLES);
+long_profit.setPaintingStrategy(PaintingStrategy.TRIANGLES);
+short_stoploss.setPaintingStrategy(PaintingStrategy.SQUARES);
+short_profit.setPaintingStrategy(PaintingStrategy.SQUARES);
+
+long_stoploss.setDefaultColor(Color.MAGENTA);
+long_profit.setDefaultColor(Color.CYAN);
+short_stoploss.setDefaultColor(Color.MAGENTA);
+short_profit.setDefaultColor(Color.CYAN);
+
+# AddLabel(yes, "STOPLOSS: " + AsText(long_stoploss, NumberFormat.THREE_DECIMAL_PLACES) + " | PROFIT: " + AsText(long_profit, NumberFormat.THREE_DECIMAL_PLACES));
+
 AddLabel(yes, "Maximum Position Size: " + AsText(mini_lot_position_size) + " mini lots", Color.MAGENTA);
-
-
-
-plot stoploss = stoploss_price;
-
-
